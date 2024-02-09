@@ -14,7 +14,7 @@ public class Activator implements BundleActivator {
         registrationList = new ArrayList<ServiceRegistration>();
 
         //Register plugin here
-        //registrationList.add(context.registerService(MyPlugin.class.getName(), new MyPlugin(), null));
+        registrationList.add(context.registerService(GoogleMapsForm.class.getName(), new GoogleMapsForm(), null));
     }
 
     public void stop(BundleContext context) {

@@ -1,0 +1,78 @@
+[
+    {
+        "title": "@@form.googleMapsForm.editgoogleMaps@@",
+        "properties": [
+            {
+                "name": "id",
+                "label": "@@form.googleMapsForm.id@@",
+                "type": "TextField",
+                "required": "True",
+                "regex_validation": "^[a-zA-Z0-9_]+$",
+                "validation_message": "@@form.googleMapsForm.invalidId@@"
+            },
+            {
+                "name": "label",
+                "label": "@@form.googleMapsForm.label@@",
+                "type": "TextField",
+                "required": "True",
+                "value": "Google Maps Element"
+            }
+        ]
+    },
+    {
+        "title": "@@form.googleMapsForm.advancedOptions@@",
+        "properties": [
+            {
+                "label": "@@form.googleMapsForm.data@@",
+                "type": "header"
+            },
+            {
+                "name": "longitude",
+                "label": "@@form.googleMapsForm.lon@@",
+                "type": "TextField"
+            },
+            {
+                "name": "latitude",
+                "label": "@@form.googleMapsForm.lat@@",
+                "type": "TextField"
+            },
+            {
+                "name": "validator",
+                "label": "@@form.googleMapsForm.validator@@",
+                "type": "elementselect",
+                "options_ajax": "[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormValidator",
+                "url": "[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions"
+            },
+            {
+                "label": "@@form.googleMapsForm.maps@@",
+                "type": "header"
+            },
+            {
+                "name": "Google Maps API Key",
+                "label": "@@form.googleMapsForm.api@@",
+                "type": "TextField"
+            },
+            {
+                "name": "Marker Name",
+                "label": "@@form.googleMapsForm.markerName@@",
+                "type": "TextField"
+            },
+            {
+                "label": "@@form.googleMapsForm.ui@@",
+                "type": "header"
+            },
+            {
+                "name": "readonly",
+                "label": "@@form.googleMapsForm.readonly@@",
+                "type": "CheckBox",
+                "value": "False",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
