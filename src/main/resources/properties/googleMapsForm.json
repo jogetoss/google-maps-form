@@ -27,12 +27,12 @@
                 "type": "header"
             },
             {
-                "name": "longitude",
+                "name": "lon",
                 "label": "@@form.googleMapsForm.lon@@",
                 "type": "TextField"
             },
             {
-                "name": "latitude",
+                "name": "lat",
                 "label": "@@form.googleMapsForm.lat@@",
                 "type": "TextField"
             },
@@ -48,12 +48,14 @@
                 "type": "header"
             },
             {
-                "name": "Google Maps API Key",
-                "label": "@@form.googleMapsForm.api@@",
+                "name": "apiKey",
+                "label": "@@form.googleMapsForm.apiKey@@",
+                "required": "True",
+                "value": "YOUR_API_KEY",
                 "type": "TextField"
             },
             {
-                "name": "Marker Name",
+                "name": "markerName",
                 "label": "@@form.googleMapsForm.markerName@@",
                 "type": "TextField"
             },
