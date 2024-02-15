@@ -13,7 +13,7 @@ public class GoogleMapsForm extends CustomHTML {
 
     @Override
     public String getName() {
-        return "Google Maps Element";
+        return "Google Maps Form";
     }
 
     @Override

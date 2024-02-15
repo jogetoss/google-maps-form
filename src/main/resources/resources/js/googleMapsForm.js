@@ -9,7 +9,7 @@ $(function() {
                 showMapAdvanced();
             });
 
-        if($("#coordinate").val() ! = "") {
+        if($("#coordinate").val() != "") {
             showMapAdvanced();
             convertCoordinate();
         }
@@ -45,7 +45,7 @@ function getLocation() {
     }
 
     else {
-        x.innerHTML="Geolocation is not supported by this browser.";
+        x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
@@ -69,20 +69,21 @@ function showMapAdvanced() {
             coordinateLon = parseFloat($("#coordinate").val().split(",")[0]);
             coordinateLat = parseFloat($("#coordinate").val().split(",")[1]);
 
+            //retrieve marker name
+            markerName = $("#markerName").val();
+
             //show the map
-            map=new google.maps.Map(document.getElementById('mapholder2'), {
+            map = new google.maps.Map(document.getElementById('mapholder2'), {
                 center: {
                     lat: coordinateLon,
                     lng: coordinateLat
-                }
-
-                ,
+                },
                 zoom: 15
             });
 
         //add info window
         var coordInfoWindow = new google.maps.InfoWindow();
-        coordInfoWindow.setContent("Your location");
+        coordInfoWindow.setContent(markerName);
 
         coordInfoWindow.setPosition({
             lat: coordinateLon,
@@ -96,7 +97,8 @@ function showMapAdvanced() {
                 lat: coordinateLon,
                 lng: coordinateLat
             },
-            map: map
+            map: map,
+            title: markerName
         });
     }
 }

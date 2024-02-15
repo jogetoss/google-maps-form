@@ -27,13 +27,13 @@
                 "type": "header"
             },
             {
-                "name": "lon",
-                "label": "@@form.googleMapsForm.lon@@",
+                "name": "lat",
+                "label": "@@form.googleMapsForm.lat@@",
                 "type": "TextField"
             },
             {
-                "name": "lat",
-                "label": "@@form.googleMapsForm.lat@@",
+                "name": "lon",
+                "label": "@@form.googleMapsForm.lon@@",
                 "type": "TextField"
             },
             {
@@ -58,22 +58,6 @@
                 "name": "markerName",
                 "label": "@@form.googleMapsForm.markerName@@",
                 "type": "TextField"
-            },
-            {
-                "label": "@@form.googleMapsForm.ui@@",
-                "type": "header"
-            },
-            {
-                "name": "readonly",
-                "label": "@@form.googleMapsForm.readonly@@",
-                "type": "CheckBox",
-                "value": "False",
-                "options": [
-                    {
-                        "value": "true",
-                        "label": ""
-                    }
-                ]
             }
         ]
     }
