@@ -1,15 +1,8 @@
 <div class="form-cell" ${elementMetaData!}>
-
-    <#if (element.properties.apiKey)??>
-        <script src="https://maps.googleapis.com/maps/api/js?key=${element.properties.apiKey}" async defer></script>
-    </#if>
+    <div id="map"></div>
     <link rel="stylesheet" type="text/css" href="${request.contextPath}/plugin/org.joget.GoogleMapsForm/css/googleMapsForm.css">
     <script>
-        window.onload = function() {
-            initMap(); 
-        }
         function initMap() {
-
                 var markers = [];
 
             <#if element.properties.addMarker??>
@@ -30,7 +23,7 @@
             </#if>
 
                 //show the map
-                map = new google.maps.Map(document.getElementById("mapholder2"), {
+                map = new google.maps.Map(document.getElementById("map"), {
                     center: {
                         lat: lat,
                         lng: lon
@@ -44,7 +37,8 @@
             }
         }
     </script>
-    <div id="mapholder2"></div>
-
+    <#if (element.properties.apiKey)??>
+        <script src="https://maps.googleapis.com/maps/api/js?key=${element.properties.apiKey}&loading=async&callback=initMap" async defer></script>
+    </#if>
     
 </div>
