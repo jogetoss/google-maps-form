@@ -27,14 +27,17 @@
                 "type": "header"
             },
             {
-                "name": "lat",
-                "label": "@@form.googleMapsForm.lat@@",
-                "type": "TextField"
-            },
-            {
-                "name": "lon",
-                "label": "@@form.googleMapsForm.lon@@",
-                "type": "TextField"
+                "name": "addMarker",
+                "label": "@@form.googleMapsForm.addMarker@@",
+                "type" : "Grid",
+                "columns" : [
+                    {"key" : "lat", "label" : "@@form.googleMapsForm.lat@@", "required": "true"
+                    },
+                    {"key" : "lon", "label" : "@@form.googleMapsForm.lon@@", "required": "true"
+                    },
+                    {"key" : "markerName", "label" : "@@form.googleMapsForm.markerName@@"
+                    }
+                ]
             },
             {
                 "name": "validator",
@@ -52,12 +55,7 @@
                 "label": "@@form.googleMapsForm.apiKey@@",
                 "required": "True",
                 "value": "YOUR_API_KEY",
-                "type": "TextField"
-            },
-            {
-                "name": "markerName",
-                "label": "@@form.googleMapsForm.markerName@@",
-                "type": "TextField"
+                "type": "password"
             }
         ]
     }
