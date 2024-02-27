@@ -1,5 +1,7 @@
 # Description
 
+NOTE: This plugin is still in development, and not meant for any release.
+
 Allows users to input coordinates and add marker locations on a Google Map
 
 Configurable options:
