@@ -22,6 +22,11 @@
                 </#list>
             </#if>
 
+        <#if (element.properties.mapWidth)?? && (element.properties.mapHeight)??>
+            $("#map").css("width", "${element.properties.mapWidth}" + "px");
+            $("#map").css("height", "${element.properties.mapHeight}" + "px");
+        </#if>
+
                 //show the map
                 map = new google.maps.Map(document.getElementById("map"), {
                     center: {

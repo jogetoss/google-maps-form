@@ -1,62 +1,83 @@
 [
-    {
-        "title": "@@form.googleMapsForm.editgoogleMaps@@",
-        "properties": [
-            {
-                "name": "id",
-                "label": "@@form.googleMapsForm.id@@",
-                "type": "TextField",
-                "required": "True",
-                "regex_validation": "^[a-zA-Z0-9_]+$",
-                "validation_message": "@@form.googleMapsForm.invalidId@@"
-            },
-            {
-                "name": "label",
-                "label": "@@form.googleMapsForm.label@@",
-                "type": "TextField",
-                "required": "True",
-                "value": "Google Maps Element"
-            }
+  {
+    "title": "@@form.googleMapsForm.editgoogleMaps@@",
+    "properties": [
+      {
+        "name": "id",
+        "label": "@@form.googleMapsForm.id@@",
+        "type": "TextField",
+        "required": "True",
+        "regex_validation": "^[a-zA-Z0-9_]+$",
+        "validation_message": "@@form.googleMapsForm.invalidId@@"
+      },
+      {
+        "name": "label",
+        "label": "@@form.googleMapsForm.label@@",
+        "type": "TextField",
+        "required": "True",
+        "value": "Google Maps Element"
+      }
+    ]
+  },
+  {
+    "title": "@@form.googleMapsForm.advancedOptions@@",
+    "properties": [
+      {
+        "label": "@@form.googleMapsForm.data@@",
+        "type": "header"
+      },
+      {
+        "name": "addMarker",
+        "label": "@@form.googleMapsForm.addMarker@@",
+        "type": "Grid",
+        "columns": [
+          {
+            "key": "lat",
+            "label": "@@form.googleMapsForm.lat@@",
+            "required": "true"
+          },
+          {
+            "key": "lon",
+            "label": "@@form.googleMapsForm.lon@@",
+            "required": "true"
+          },
+          { "key": "markerName", "label": "@@form.googleMapsForm.markerName@@" }
         ]
-    },
-    {
-        "title": "@@form.googleMapsForm.advancedOptions@@",
-        "properties": [
-            {
-                "label": "@@form.googleMapsForm.data@@",
-                "type": "header"
-            },
-            {
-                "name": "addMarker",
-                "label": "@@form.googleMapsForm.addMarker@@",
-                "type" : "Grid",
-                "columns" : [
-                    {"key" : "lat", "label" : "@@form.googleMapsForm.lat@@", "required": "true"
-                    },
-                    {"key" : "lon", "label" : "@@form.googleMapsForm.lon@@", "required": "true"
-                    },
-                    {"key" : "markerName", "label" : "@@form.googleMapsForm.markerName@@"
-                    }
-                ]
-            },
-            {
-                "name": "validator",
-                "label": "@@form.googleMapsForm.validator@@",
-                "type": "elementselect",
-                "options_ajax": "[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormValidator",
-                "url": "[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions"
-            },
-            {
-                "label": "@@form.googleMapsForm.maps@@",
-                "type": "header"
-            },
-            {
-                "name": "apiKey",
-                "label": "@@form.googleMapsForm.apiKey@@",
-                "required": "True",
-                "value": "YOUR_API_KEY",
-                "type": "password"
-            }
-        ]
-    }
+      },
+      {
+        "name": "validator",
+        "label": "@@form.googleMapsForm.validator@@",
+        "type": "elementselect",
+        "options_ajax": "[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormValidator",
+        "url": "[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions"
+      },
+      {
+        "label": "@@form.googleMapsForm.maps@@",
+        "type": "header"
+      },
+      {
+        "name": "apiKey",
+        "label": "@@form.googleMapsForm.apiKey@@",
+        "required": "True",
+        "value": "YOUR_API_KEY",
+        "type": "password"
+      },
+      {
+        "label": "@@form.googleMapsForm.ui@@",
+        "type": "header"
+      },
+      {
+        "name": "mapWidth",
+        "label": "@@form.googleMapsForm.width@@",
+        "value": "500",
+        "type": "number"
+      },
+      {
+        "name": "mapHeight",
+        "label": "@@form.googleMapsForm.height@@",
+        "value": "300",
+        "type": "number"
+      }
+    ]
+  }
 ]
