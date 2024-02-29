@@ -6,14 +6,17 @@ Allows users to input coordinates and add marker locations on a Google Map
 
 Configurable options:
 
-  - Map type (roadmap, satellite)
-  - Data:
-    - Add marker
-      - Latitude (required)
-      - Longitude (required)
-      - Marker name
-  - Map settings:
-    - API key (required)
+- Map type (roadmap, satellite)
+- Data:
+  - Add marker
+    - Latitude (required)
+    - Longitude (required)
+    - Marker name
+- Map configuration:
+  - API key (required)
+- UI:
+  - Width (px)
+  - Height (px)
 
 # Getting Help
 
